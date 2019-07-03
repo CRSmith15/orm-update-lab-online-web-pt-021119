@@ -37,6 +37,6 @@ def save
   SQL
   
   DB[:conn].execute(sql, self.name, self.grade)
-  @id = DB[:conn].execute("SELECT_lastinsert_")
+  @id = DB[:conn].execute("SELECT last_insert_rowid()")
 
 end
