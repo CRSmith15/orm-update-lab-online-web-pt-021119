@@ -71,7 +71,9 @@ end
 def update
   sql = <<-SQL
   UPDATE students
-  SET 
+  SET name = ?, grade = ?
+  WHERE id = ?
+  
   SQL
 
 end
